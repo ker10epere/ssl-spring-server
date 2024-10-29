@@ -1,0 +1,22 @@
+spring:
+  ssl:
+    bundle:
+      jks:
+        web:
+          truststore:
+            location: classpath:certificates/ca/cacerts
+            password: "changeit"
+            type: "PKCS12"
+          keystore:
+            location: classpath:certificates/server/server.pfx
+            password: "changeit"
+            type: "PKCS12"
+
+server:
+  ssl:
+    client-auth: NEED
+    bundle: web
+
+logging:
+  level:
+    root: trace

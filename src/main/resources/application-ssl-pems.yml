@@ -1,0 +1,10 @@
+server:
+  ssl:
+    client-auth: NEED
+    certificate: classpath:certificates/server/server.crt
+    certificate-private-key: classpath:certificates/server/server.key
+    trust-certificate: classpath:certificates/ca/ca.crt
+
+logging:
+  level:
+    root: trace
